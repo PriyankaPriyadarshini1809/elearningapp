@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="50dp"
+        android:typeface="serif"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sign Up to begin"
+        android:textColor="@android:color/black"
+        android:textSize="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/backwithborder"
+            android:hint="Name"
+            android:textSize="20dp"
+            android:inputType="textNoSuggestions"
+            android:paddingStart="5dp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backwithborder"
+            android:hint="Email"
+            android:textSize="20dp"
+            android:inputType="textEmailAddress"
+            android:paddingStart="5dp"/>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:background="@drawable/backwithborder"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:paddingStart="5dp"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backwithborder"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="5dp"/>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40sp"
+            android:background="#ffa500"
+            android:text="register"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Already Signedin?Login"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
