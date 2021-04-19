@@ -129,8 +129,8 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="NSTSE"
-                        android:id="@+id/nstse"/>
+                        android:text="NEET"
+                        android:id="@+id/neet"/>
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
