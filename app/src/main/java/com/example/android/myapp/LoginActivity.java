@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,11 +13,10 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 public class LoginActivity extends AppCompatActivity {
-    private FirebaseAuth firebaseAuth;
-    private Button logout;
-    private Button allusers;
+
+    Button b10;
+    Button gate;
 
 
     @Override
@@ -24,41 +24,36 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        firebaseAuth=FirebaseAuth.getInstance();
-        logout=(Button) findViewById(R.id.logout);
-        logout.setOnClickListener(new View.OnClickListener() {
+        b10=findViewById(R.id.class10);
+        gate=findViewById(R.id.gate);
+
+
+
+        b10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
-                finish();
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                gotoUrl("https://youtube.com/c/ArvindAcademy");
+            }
+        });
+        gate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://youtube.com/channel/UCwh_qd5g7I88OVr8FM1PnjQ");
             }
         });
 
 
 
-    }
-    private void Logout(){
-        firebaseAuth.signOut();
-        finish();
-        startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.LogoutMenu:{
-                Logout();
-            }
-        }
-        return super.onOptionsItemSelected(item);
+    private void gotoUrl(String s) {
+        Uri uri=Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
 
 }
+
+
+
